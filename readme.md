@@ -6,7 +6,7 @@ Overview
 ①ローカルの作業フォルダーを作成する
 ```
  $ mkdir team_ponkotu
- $ cd one_step/
+ $ cd team_ponkotu/
  $ git clone https://github.com/LaraDock/laradock.git
  $ cd laradock/
 ```
@@ -126,6 +126,9 @@ Appendix
  
  // 毎回ビルドしなくても、コンパイルしてくれるらしいよ!?
  laradock@:/var/www/src$ npm run watch
+
+ //nginxの設定を変更した時は、下記のコマンドを打っておく
+ $ docker-compose build --no-cache nginx 
 ```
 ## Usage
 issueの管理やブランチの管理については検討中
