@@ -48,9 +48,9 @@ laradock_workspace_1          /sbin/my_init                   Up      0.0.0.0:22
 $ docker-compose exec --user=laradock workspace bash
 laradock@:/var/www$ git clone https://github.com/goombeer/team_ponkotu.git
 //lsコマンドで下記のようになっていたら、OK
-//ここの「src」がローカルファイルと同期されているので、ローカルファイルを変更すれば、ここも変更になるはず。
+//ここの「team_ponkotu」がローカルファイルと同期されているので、ローカルファイルを変更すれば、ここも変更になるはず。
 laradock@51aec74afbbb:/var/www$ ls
-src  laradock
+team_ponkotu  laradock
 ```
 
 ⑤ローカルファイルの確認
@@ -60,12 +60,12 @@ laradock@51aec74afbbb:/var/www$ exit
 exit
 //階層を一つ上がって、下記のようになっていたらOK
 $ cd ../
-src		laradock
+team_ponkotu		laradock
 ```
 ⑥DB接続
 ```
-laradock@:/var/www/src$ cp .env.example .env
-laradock@:/var/www/src$ vim .env
+laradock@:/var/www/team_ponkotu$ cp .env.example .env
+laradock@:/var/www/team_ponkotu$ vim .env
 //MySQLの設定を下記のように書き換える
 --------------------
 DB_CONNECTION=mysql
@@ -78,14 +78,14 @@ DB_PASSWORD=hogehoge
 
 //必要なものを諸々入れてくれる
 
-laradock@:/var/www/src$ composer install
-laradock@:/var/www/src$ php artisan migrate
-laradock@:/var/www/src$ php artisan key:generate
+laradock@:/var/www/team_ponkotu$ composer install
+laradock@:/var/www/team_ponkotu$ php artisan migrate
+laradock@:/var/www/team_ponkotu$ php artisan key:generate
 ```
 
 ⑦Laradock側のenvファイルにパスを通す
 ```
- laradock@:/var/www/src$ exit
+ laradock@:/var/www/team_ponkotu$ exit
  $ cd ../
  $ cd laradock
  $ vim .env
@@ -98,34 +98,34 @@ laradock@:/var/www/src$ php artisan key:generate
  # Point to the path of your applications code on your host
  
  - APP_CODE_PATH_HOST=../  
- + APP_CODE_PATH_HOST=../src/
+ + APP_CODE_PATH_HOST=../team_ponkotu/
 ```
 
 ⑧確認
 ```
-laradock@:/var/www/src$ php artisan --version
+laradock@:/var/www/team_ponkotu$ php artisan --version
 Laravel Framework 5.5.43
-laradock@:/var/www/src$ php -v
+laradock@:/var/www/team_ponkotu$ php -v
 PHP 7.2.4-1+ubuntu16.04.1+deb.sury.org+1 (cli) (built: Apr  5 2018 08:53:57) ( NTS )
 ```
 
 Appendix
 ```
 // 各バージョンの確認
- laradock@:/var/www/src$ npm -v
+ laradock@:/var/www/team_ponkotu$ npm -v
  6.4.1
  
- laradock@:/var/www/src$ node -v
+ laradock@:/var/www/team_ponkotu$ node -v
  v10.10.0
  
  // nodemodule(package.jsonを) インストール
- laradock@:/var/www/src$ npm install
+ laradock@:/var/www/team_ponkotu$ npm install
  
  // 全タスクの実行
- laradock@:/var/www/src$ npm run dev
+ laradock@:/var/www/team_ponkotu$ npm run dev
  
  // 毎回ビルドしなくても、コンパイルしてくれるらしいよ!?
- laradock@:/var/www/src$ npm run watch
+ laradock@:/var/www/team_ponkotu$ npm run watch
 
  //nginxの設定を変更した時は、下記のコマンドを打っておく
  $ docker-compose build --no-cache nginx 
