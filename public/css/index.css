@@ -1,0 +1,16 @@
+.text-area {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.has-mg-100{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.has-mg-50{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

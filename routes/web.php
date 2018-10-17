@@ -14,3 +14,23 @@
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/create', function () {
+    return view('create');
+});
+
+Route::get('/{project_id}/share', function () {
+    return view('share');
+});
+
+Route::get('/{project_id}/message', function () {
+    return view('index');
+});
+
+Route::get('/{project_id}/message/confirm', function () {
+    return view('index');
+});
+
+Route::get('/{project_id}/message/finish', function () {
+    return view('index');
+});

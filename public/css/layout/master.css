@@ -1,0 +1,22 @@
+
+header.nav {
+    border-bottom: solid 1px #EDEDED;
+}
+
+.has-gray{
+    background-color: #F8F8F8;
+}
+.has-gray-text{
+    color: #6F7579;
+}
+
+.has-custom-color{
+    background-color: #F4BB51;
+    color: #FFFFFF;
+}
+
+.has-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
