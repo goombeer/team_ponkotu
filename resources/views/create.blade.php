@@ -28,10 +28,6 @@
                     <input class="input" type="text" placeholder="入力してください">
                 </div>
                 <div class="has-mg-top-20">
-                    <label class="label has-gray-text">メッセージの内容</label>
-                    <input class="input" type="text" placeholder="入力してください">
-                </div>
-                <div class="has-mg-top-20">
                     <label class="label has-gray-text">投稿の期限</label>
                     <input class="input" type="date" placeholder="日付を選択してください">
                 </div>
