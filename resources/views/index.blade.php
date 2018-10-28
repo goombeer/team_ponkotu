@@ -28,21 +28,21 @@
             <h4 class="title is-4 has-gray-text has-mg-50">ご利用の流れ</h4>
         </div>
         <div class="column is-offset-2 is-8 has-flex has-mg-50">
-            <img src="./images/write.png" alt="">
+            <img src="{{ asset('./images/write.png') }}" alt="">
             <div class="text-area">
                 <h5 class="title is-5 has-gray-text">新規作成</h4>
                 <p class="subtitle is-6">寄せ書きを作る目的、どう言った内容のメッセージにするか、寄せ書きを送る相手の写真を決めて新規作成する。</p>
             </div>
         </div>
         <div class="column is-offset-2 is-8 has-flex has-mg-50">
-            <img src="./images/mail.png" alt="">
+            <img src="{{ asset('./images/mail.png') }}" alt="">
             <div class="text-area">
                 <h5 class="title is-5 has-gray-text">シェアする</h4>
                 <p class="subtitle is-6">メッセージを書いて欲しい、友人・知人に寄せ書きへの招待URLをシェアする。</p>
             </div>
         </div>
         <div class="column is-offset-2 is-8 has-flex has-mg-50">
-            <img src="./images/image.png" alt="">
+            <img src="{{ asset('./images/image.png') }}" alt="">
             <div class="text-area">
                 <h5 class="title is-5 has-gray-text">画像で保存</h4>
                 <p class="subtitle is-6">メッセージが集まると、一つの画像として保存されます。</p>

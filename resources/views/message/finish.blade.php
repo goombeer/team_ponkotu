@@ -14,8 +14,11 @@
 @include('layouts.header')
  
 @section('content')
-    <h1>create</h1>
-    <p>コンテンツ内容が入ります</p>
+<div class="hero-body">
+    <div class="container">
+        finish
+    <div>    
+</div>
 @endsection
   
 @section('pageJs')

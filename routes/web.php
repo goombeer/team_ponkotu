@@ -24,13 +24,13 @@ Route::get('/{project_id}/share', function () {
 });
 
 Route::get('/{project_id}/message', function () {
-    return view('index');
+    return view('message.message');
 });
 
 Route::get('/{project_id}/message/confirm', function () {
-    return view('index');
+    return view('message.confirm');
 });
 
 Route::get('/{project_id}/message/finish', function () {
-    return view('index');
+    return view('message.finish');
 });

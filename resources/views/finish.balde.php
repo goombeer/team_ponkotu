@@ -16,6 +16,7 @@
 @section('content')
     <h1>finish</h1>
     <p>コンテンツ内容が入ります</p>
+
 @endsection
   
 @section('pageJs')

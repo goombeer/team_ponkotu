@@ -14,8 +14,25 @@
 @include('layouts.header')
  
 @section('content')
-    <h1>create</h1>
-    <p>コンテンツ内容が入ります</p>
+<div class="hero-body">
+    <div class="container">
+        <div class="column is-8 is-offset-2 has-mg-100">
+            <div class="has-mg-top-20">
+                <label class="label has-gray-text">お届けのお相手</label>
+                <p class="has-gray-text">藤代　明史さん</p>
+            </div>
+        </div>
+        <div class="column is-8 is-offset-2 has-mg-100">
+            <figure class="image is-square">
+                <img src="{{ asset('./images/dumy.png') }}" alt="">
+            </figure>
+        </div>
+
+        <div class="column is-offset-2 is-8 has-text-centered">
+            <input type="submit" class="button has-custom-color" value="送る">
+        </div>
+    <div>    
+</div>
 @endsection
   
 @section('pageJs')
