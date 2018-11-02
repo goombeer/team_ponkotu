@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::get('/create', 'ProjectController@create');
 
-Route::get('/{project_id}/share', 'ProjectController@share');
+Route::post('/share', 'ProjectController@share');
 
 Route::get('/{project_id}/message', 'ProjectController@message');
 

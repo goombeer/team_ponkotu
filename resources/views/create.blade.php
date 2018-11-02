@@ -16,25 +16,26 @@
 @section('content')
 <div class="hero-body">
     <div class="container">
-        <form action="" method="post">
+        <form action="/share" method="post">
+        {{ csrf_field() }}
             <div class="column is-8 is-offset-2 has-custom-border">
                 <label class="label has-gray-text">お届けのお相手</label>
                 <div class="has-flex">
-                    <input class="input has-mg-right-20" type="text" placeholder="性">
-                    <input class="input has-mg-right-20" type="text" placeholder="名">
+                    <input class="input has-mg-right-20" type="text" placeholder="性" name="first_name">
+                    <input class="input has-mg-right-20" type="text" placeholder="名" name="last_name">
                 </div>
                 <div class="has-mg-top-20">
                     <label class="label has-gray-text">メッセージの目的</label>
-                    <input class="input" type="text" placeholder="入力してください">
+                    <input class="input" type="text" placeholder="入力してください" name="message_purpose">
                 </div>
                 <div class="has-mg-top-20">
                     <label class="label has-gray-text">投稿の期限</label>
-                    <input class="input" type="date" placeholder="日付を選択してください">
+                    <input class="input" type="date" placeholder="日付を選択してください" name="post_deadline">
                 </div>
                 <div class="has-mg-top-20">
                     <label class="label has-gray-text">メールアドレス</label>
                     <p class="has-gray-text">投稿の期限が過ぎたら、指定のメールアドレスにリマインドを送ります</p>
-                    <input class="input" type="email" placeholder="XXXX@example.com">
+                    <input class="input" type="email" placeholder="XXXX@example.com" name="reminder_mail_adress">
                 </div>
 
                 <div class="column is-offset-2 is-8 has-text-centered">
